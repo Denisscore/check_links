@@ -12,7 +12,6 @@ class Cli(cmd.Cmd):
         cmd.Cmd.__init__(self)
         self.prompt = "> "
         self.intro = "Hello\n for help enter 'help'"
-        self.doc_header ="Доступные команды (для справки по конкретной команде наберите 'help _команда_')"
         self.lens = lens
         if type(lens) == str:
             self.lens = lens.split(' ')
