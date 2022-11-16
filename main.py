@@ -61,7 +61,7 @@ class Cli(cmd.Cmd):
             print(f"String {link} is a link")
 
     def do_send_request(self, args):
-        """check string for reference"""
+        """send comand for url"""
         jobs = [gevent.spawn(send_request, _url) for _url in self.links]
         gevent.wait(jobs)
 
